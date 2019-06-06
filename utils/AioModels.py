@@ -10,7 +10,7 @@ class AioRedis:
 
     async def init_redis(self, *args, **kwargs):
         """redis连接池初始化函数"""
-        await aioredis.Redis(aioredis.ConnectionsPool(*args, **kwargs))
+        return await aioredis.Redis(aioredis.ConnectionsPool(*args, **kwargs))
 
 
 class AioMysql:
